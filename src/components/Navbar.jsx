@@ -1,10 +1,38 @@
-import React from 'react'
+import { useGSAP } from '@gsap/react'
+import { navLinks } from '../../constants/index'
+import gsap from 'gsap'
 
 const Navbar = () => {
+    useGSAP(() => {
+        const navTween = gsap.timeline({
+            scrollTrigger: {
+                trigger: 'nav',
+                start: 'bottom top'
+            }
+        });
+        navTween.fromTo('nav', { backgroundColor: 'transparent'}, {
+            backgroundColor: '#00000050',
+            backgroundFilter: 'blur(10px)',
+            duration: 1,
+            ease: 'power1.inOut'
+        });
+    })
   return (
-    <div>
-      
-    </div>
+    <nav>
+      <div className="">
+        <img src="/images/logo.png" className='logo' alt="Logo" />
+            
+        <ul className="flex gap-5">
+            {navLinks.map((link) => (
+                <li key={link.id}>
+                    <a href={`#${link.id}`} className="hover:text-yellow-500">
+                        {link.title}
+                    </a>
+                </li>
+            ))}
+        </ul>
+      </div>
+    </nav>
   )
 }
 
