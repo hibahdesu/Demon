@@ -25,7 +25,7 @@ const Navbar = () => {
         <ul className="flex gap-5">
             {navLinks.map((link) => (
                 <li key={link.id}>
-                    <a href={`#${link.id}`} className="hover:text-yellow-500">
+                    <a href={`#${link.id}`} className="hover:text-[var(--color-flame)]">
                         {link.title}
                     </a>
                 </li>

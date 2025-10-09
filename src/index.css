@@ -10,6 +10,16 @@
 @theme {
     --color-yellow: #e7d393;
     --color-white-100: #efefef;
+    --color-blood: #8B0000;
+    --color-flame: #FF4500;
+    --color-jade: #2E8B57;
+
+    --color-light: #F5E6CC;
+    --color-dark: #0A0A0A;
+
+    --color-mist: #1A1A1A;
+    --color-bone: #F5E6CC;
+
     --font-sans: "Mona Sans", sans-serif;
     --font-modern-negra: "Modern Negra", sans-serif;
     --font-serif: "DM Serif Text", serif;
@@ -113,7 +123,7 @@ body {
                 @apply flex lg:flex-row flex-col w-full gap-10 justify-between items-center lg:items-end mx-auto;
 
                 p:nth-of-type(2) {
-                    @apply font-modern-negra text-6xl text-yellow max-w-xl;
+                    @apply font-modern-negra text-6xl text-[var(--color-flame)] max-w-xl;
                 }
 
                 p:last-of-type {
@@ -128,7 +138,7 @@ body {
                     }
 
                     a {
-                        @apply font-semibold opacity-80 2xl:text-start text-center hover:text-yellow;
+                        @apply font-semibold opacity-80 2xl:text-start text-center hover:text-[var(--color-flame)];
                     }
                 }
             }
@@ -172,7 +182,7 @@ body {
                     @apply flex justify-between items-start;
 
                     h3 {
-                        @apply font-modern-negra 2xl:text-3xl text-xl text-yellow;
+                        @apply font-modern-negra 2xl:text-3xl text-xl text-[var(--color-flame)];
                     }
 
                     p {
@@ -208,7 +218,7 @@ body {
                     @apply flex flex-col justify-between md:gap-2 gap-5;
 
                     span {
-                        @apply text-yellow font-bold text-5xl;
+                        @apply text-[var(--color-flame)] font-bold text-5xl;
                     }
                 }
             }
@@ -292,7 +302,7 @@ body {
             @apply grid md:grid-cols-4 grid-cols-2 md:gap-20 gap-10 sm:mb-32 mb-20 relative z-10 md:max-w-6xl md:mx-auto;
 
             button {
-                @apply md:text-3xl text-xl pb-2 cursor-pointer hover:text-yellow hover:border-yellow border-b-1 transition-colors font-modern-negra;
+                @apply md:text-3xl text-xl pb-2 cursor-pointer hover:text-[var(--color-flame)] hover:border-yellow border-b-1 transition-colors font-modern-negra;
             }
         }
 
@@ -303,7 +313,7 @@ body {
                 @apply flex items-center justify-between w-full absolute;
 
                 button {
-                    @apply text-white hover:text-yellow cursor-pointer transition-colors max-w-36;
+                    @apply text-white hover:text-[var(--color-flame)] cursor-pointer transition-colors max-w-36;
 
                     span {
                         @apply text-3xl font-modern-negra leading-none hidden md:block;
@@ -327,7 +337,7 @@ body {
                 @apply space-y-4 lg:translate-y-20;
 
                 #title {
-                    @apply font-modern-negra md:text-6xl text-3xl text-yellow max-w-40;
+                    @apply font-modern-negra md:text-6xl text-3xl text-[var(--color-flame)] max-w-40;
                 }
             }
 
