@@ -9,7 +9,7 @@ import TextAndImages from './TextAndImages';
 
 function Battles() {
   return (
-    <section id='fights'>
+    <section id='fights bg-black'>
       <Title
         Style="animated-title bg-gradient-to-r from-yellow-300 via-orange-400 to-yellow-600 text-transparent bg-clip-text drop-shadow-md"
         Title={
