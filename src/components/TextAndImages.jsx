@@ -44,7 +44,7 @@ export default function TextAndImages() {
       {/* Section 1 */}
       <section
         ref={aboutRef}
-        className="relative w-full min-h-screen px-4 sm:px-8 md:px-12 py-12 flex justify-center items-center overflow-hidden"
+        className="relative w-full min-h-screen px-4 sm:px-8 md:px-12 py-8 flex justify-center items-center overflow-hidden"
       >
         <h1
           className="animate-text relative z-10  max-w-[80%] text-center text-[6vw] sm:text-[4vw] font-extrabold leading-snug tracking-tight text-neutral-900"
