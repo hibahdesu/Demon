@@ -305,7 +305,7 @@ body {
         @apply relative min-h-dvh w-full overflow-hidden py-32;
     }
     #title {
-        @apply w-full mx-2 p-8 max-w-4xl;
+        @apply w-full mx-2 p-8 max-w-4xl mb-2;
 
         h1 {
             @apply font-logo text-[6vw] font-extrabold tracking-tight leading-tight
