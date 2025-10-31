@@ -1,16 +1,62 @@
-# React + Vite
+# 🗡️ Demon Slayer: Infinity Impact
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A cinematic, scroll-driven web experience that explores the final chapter of Demon Slayer — blending immersive storytelling, animated UI, and real-world box office analytics powered by Power BI.
 
-Currently, two official plugins are available:
+## 🎬 Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is a tribute to the emotional and visual legacy of *Demon Slayer: Infinity Castle*. It features:
 
-## React Compiler
+- 🔥 Scroll-triggered animations and GSAP-powered motion sequences
+- 🏯 Narrative breakdown of the final movie arc
+- 📊 Power BI dashboard analyzing box office performance across global and regional markets
+- 🇸🇦 Weekly ranking trends from the Saudi box office
+- 🎨 Anime-inspired gradients, layouts, and character symbolism
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 📁 Structure
 
-## Expanding the ESLint configuration
+- `src/components/` – Cinematic sections like Hero, BoxOfficeBreakdown, CulturalImpact, StoryOverview, and Footer
+- `src/constants/` – Modular content for narrative, metrics, and layout
+- `public/` – Assets including images, videos, and Power BI embeds
+- `README.md` – You're reading it!
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 📊 Saudi Box Office Highlights
+
+| Week | Date Range | Rank |
+|------|------------|------|
+| Week 2 Sep | Release Week | 🥇 1st |
+| Week 3 Sep | Second Week | 🥇 1st |
+| Week 4 Sep | Third Week | 🥈 2nd |
+| Week 1 Oct | Fourth Week | 🥉 3rd |
+| Week 2 Oct | Fifth Week | 4th |
+| Week 3 Oct | Sixth Week | 8th |
+| Week 4 Oct | Seventh Week | 8th |
+
+## 🚀 Deployment
+
+You can deploy this project for free using:
+
+- [Vercel](https://vercel.com/)
+- [Netlify](https://www.netlify.com/)
+- [Cloudflare Pages](https://pages.cloudflare.com/)
+
+## 🛠️ Tech Stack
+
+- React + TailwindCSS
+- GSAP + ScrollTrigger + SplitText
+- Power BI (embedded)
+- GitHub for version control
+
+## 📸 Screenshots
+
+Coming soon — cinematic stills and dashboard previews.
+
+## 📜 License
+
+MIT — feel free to remix, adapt, and build upon it.
+
+## 🙌 Credits
+
+Designed and developed by [Hibah Sindi](https://www.linkedin.com/in/hibah-sindi/)  
+Inspired by the legacy of *Demon Slayer: Kimetsu no Yaiba*
+
+---
