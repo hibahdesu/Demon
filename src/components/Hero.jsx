@@ -43,37 +43,32 @@ const Hero = () => {
       delay: 1.2,
     });
 
-    // Parallax left/right movement
-    gsap
-      .timeline({
-        scrollTrigger: {
-          trigger: '#hero',
-          start: 'top top',
-          end: 'bottom top',
-          scrub: true,
-        },
-      })
+    gsap.timeline({
+      scrollTrigger: {
+        trigger: '#hero',
+        start: 'top top',
+        end: 'bottom top',
+        scrub: true,
+      },
+    })
       .to('.right', { y: 200 }, 0)
       .to('.left', { y: -200 }, 0);
 
-    // ✅ Video scroll control with pin fix
     const startValue = isMobile ? 'top top' : 'center 50%';
     const endValue = isMobile ? 'bottom top' : 'bottom top';
 
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: videoRef.current,
-        start: startValue,
-        end: endValue,
-        scrub: true,
-        pin: true,
-        anticipatePin: 1, // prevents early unpin (black gap)
-        pinSpacing: false, // removes default extra space
-      },
-    });
-
     videoRef.current.onloadedmetadata = () => {
-      tl.to(videoRef.current, {
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: '.video-wrapper',
+          start: startValue,
+          end: endValue,
+          scrub: true,
+          pin: true,
+          anticipatePin: 1,
+          pinSpacing: false,
+        },
+      }).to(videoRef.current, {
         currentTime: videoRef.current.duration,
         ease: 'none',
       });
@@ -81,41 +76,37 @@ const Hero = () => {
   }, []);
 
   return (
-    <>
-      <section id="hero" className="bg">
-        <h1 className="title">
-          Infinity
-          <br /> Castle
-        </h1>
-
-        <div className="body">
-          <div className="content">
-            <div className="space-y-5 hidden md:block">
-              <p className="subtitle-left">
-                The Final Descent into <br /> the Infinity Castle
-              </p>
-            </div>
-
-            <div className="view">
-              <p className="subtitle">
-                Experience the legendary showdown through visuals, story recaps, and battles.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ✅ Fullscreen fixed video */}
-      <div className="hero-video">
+    <section id="hero" className="relative z-10 min-h-dvh h-screen w-full overflow-hidden">
+      <div className="video-wrapper absolute inset-0 z-0 w-full h-full">
         <video
           ref={videoRef}
           muted
           playsInline
           preload="auto"
           src="/videos/hero.mp4"
+          className="w-full h-full object-cover"
         />
       </div>
-    </>
+
+      <h1 className="title text-center leading-none text-7xl md:text-[10vw] mt-40 md:mt-32 font-logo">
+        Infinity<br />Castle
+      </h1>
+
+      <div className="body container mx-auto absolute left-1/2 -translate-x-1/2 lg:bottom-20 top-auto md:top-[30vh] flex justify-between items-end px-5">
+        <div className="content flex lg:flex-row flex-col w-full gap-10 justify-between items-center lg:items-end mx-auto">
+          <div className="space-y-5 hidden md:block">
+            <p className="subtitle-left text-4xl font-bold max-w-xl">
+              The Final Descent into <br /> the Infinity Castle
+            </p>
+          </div>
+          <div className="view space-y-5 text-lg lg:max-w-2xs md:max-w-xs w-full">
+            <p className="subtitle text-left">
+              Experience the legendary showdown through visuals, story recaps, and battles.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 };
 
