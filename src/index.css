@@ -259,7 +259,7 @@ body {
     }
 
     #hero {
-        @apply relative z-10 min-h-dvh w-full h-screen border border-transparent;
+        @apply relative z-10 min-h-dvh w-full h-screen border border-transparent mb:4;
 
         h1 {
             font-family: var(--font-logo);
