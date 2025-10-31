@@ -1,0 +1,8 @@
+ffmpeg -i input8.mp4 -vf "scale=960:trunc(ow/a/2)*2" -movflags faststart -vcodec libx264 -crf 20 -pix_fmt yuv420p output8.mp4
+
+
+npm install @studio-freight/lenis
+
+npm install react-router-dom
+
+npm install react-icons
