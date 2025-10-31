@@ -7,7 +7,7 @@ const AboutSection = () => {
 
   return (
     <section
-      className="relative bg-black text-white py-10 px-4 sm:px-6 md:px-10 overflow-hidden"
+      className="relative bg-black text-white py-2 md:py-10 px-4 sm:px-6 md:px-10 overflow-hidden"
     >
       <Text text={paragraph} />
     </section>

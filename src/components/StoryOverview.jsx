@@ -4,6 +4,7 @@ import gsap from 'gsap';
 import { SplitText } from 'gsap/SplitText';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import { storyOverviewContent } from '../../constants';
+import Text from './Text';
 
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
@@ -79,21 +80,13 @@ function StoryOverview() {
   }, []);
 
   return (
-    <section id="story" className="bg py-32" ref={sectionRef}>
+    <section id="story" className="bg py-2 md:py-18" ref={sectionRef}>
       <div className="container mx-auto px-6 text-center">
         <h1 ref={titleRef} className="animated-title2 mb-6 text-4xl md:text-5xl font-bold text-white">
           {storyOverviewContent.title}
         </h1>
-        {storyOverviewContent.paragraphs.map((text, index) => (
-          <p
-            key={index}
-            ref={(el) => {
-              if (index === 0) paragraphRefs.current = el;
-            }}
-            className={`max-w-3xl mx-auto text-lg md:text-xl text-gray-100 leading-relaxed ${index === 0 ? 'mb-8' : ''}`}
-          >
-            {text}
-          </p>
+        {storyOverviewContent.paragraphs.map((text) => (
+          <Text text={text} />
         ))}
       </div>
     </section>

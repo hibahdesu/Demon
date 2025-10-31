@@ -320,3 +320,32 @@ body {
     }
 
 }
+.hero-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100dvh;
+  z-index: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+.hero-video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  background-color: black;
+}
+
+/* ✅ iOS fix */
+@supports (-webkit-touch-callout: none) {
+  .hero-video {
+    height: -webkit-fill-available;
+  }
+  .hero-video video {
+    height: -webkit-fill-available;
+    object-fit: cover !important;
+  }
+}
