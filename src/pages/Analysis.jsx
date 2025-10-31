@@ -1,3 +1,4 @@
+//src/pages/Analysis.jsx
 import React from "react";
 import BoxOfficeIntro from "../components/BoxOfficeIntro";
 import BoxOfficeBreakdown from "../components/BoxOfficeBreakdown";
