@@ -61,7 +61,7 @@ const BoxOfficeBreakdown = () => {
             alt={item.alt}
             className="rounded-lg shadow-lg mb:2 md:mb-8"
           />
-          <h4 className="mt-2 mb-0 text-lg font-semibold">{item.title}</h4>
+          <h4 className="mt:0 md:mt-2 mb-0 text-lg font-semibold">{item.title}</h4>
           <Text text={item.text} />
         </div>
       ))}
