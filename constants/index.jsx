@@ -22,9 +22,11 @@ export const storyOverviewContent = {
   title: 'The Story So Far',
   paragraphs: [
     `The Demon Slayer Corps is pulled into Muzan’s shifting fortress, a surreal, gravity-defying realm where the final battle begins. Inside the castle, Tanjiro, Nezuko, and the Hashira face the remaining Upper Moons in brutal, emotional showdowns. Akaza’s tragic past resurfaces, Shinobu executes her final plan, and Zenitsu steps into his promise.`,
-    `As the castle collapses, the Corps prepares for their last stand against Muzan, a fight that will decide the fate of humanity and the legacy of every fallen warrior.`,
   ],
 };
+
+export const paragraph = `As the castle collapses, the Corps prepares for their last stand against Muzan, a fight that will decide the fate of humanity and the legacy of every fallen warrior.`;
+
 export const myBattleData = [
   {
     title: "Zenitsu vs Kaigaku",

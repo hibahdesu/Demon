@@ -9,6 +9,7 @@ import CinematicFooter from "../components/CinematicFooter";
 import {quotes} from '../../constants/index'
 import Quotes from "../components/Quotes";
 import Battles from "../components/Battles";
+import AboutSection from "../components/AboutSection";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -19,6 +20,7 @@ const Home = () => {
     <>
       <Hero />
       <StoryOverview />
+      <AboutSection />
       <Battles />
       <Title Title="The Heart Behind the Blade"  Style="animated-title bg-gradient-to-r from-pink-300 via-sky-400 via-yellow-300 via-purple-400 to-indigo-900 text-transparent bg-clip-text drop-shadow-md"/>
       <Quotes quotes={quotes}/>

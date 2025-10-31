@@ -90,7 +90,7 @@ function StoryOverview() {
             ref={(el) => {
               if (index === 0) paragraphRefs.current = el;
             }}
-            className={`max-w-3xl mx-auto text-lg md:text-xl text-gray-100 leading-relaxed ${index === 0 ? 'mb-6' : ''}`}
+            className={`max-w-3xl mx-auto text-lg md:text-xl text-gray-100 leading-relaxed ${index === 0 ? 'mb-8' : ''}`}
           >
             {text}
           </p>

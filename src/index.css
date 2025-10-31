@@ -259,7 +259,7 @@ body {
     }
 
     #hero {
-        @apply relative z-10 min-h-dvh w-full h-screen border border-transparent mb:4;
+        @apply relative z-10 min-h-dvh w-full h-screen border border-transparent;
 
         h1 {
             font-family: var(--font-logo);
@@ -305,7 +305,7 @@ body {
         @apply relative min-h-dvh w-full overflow-hidden py-32;
     }
     #title {
-        @apply w-full mx-8 p-8 max-w-3xl;
+        @apply w-full mx-2 p-8 max-w-4xl;
 
         h1 {
             @apply font-logo text-[6vw] font-extrabold tracking-tight leading-tight
