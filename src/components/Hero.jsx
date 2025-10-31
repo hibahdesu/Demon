@@ -4,7 +4,6 @@ import { SplitText } from 'gsap/all';
 import React, { useRef } from 'react'
 import { useMediaQuery } from 'react-responsive';
 
-
 const Hero = () => {
     const videoRef = useRef();
     const isMobile = useMediaQuery({ maxWidth: 767});
@@ -78,23 +77,20 @@ const Hero = () => {
   return (
     <>
         <section id='hero' className='bg'>
-            <h1 className='title'>Demon <br /> Slayer</h1>
+            <h1 className='title'>Infinity<br /> Castle </h1>
             
             {/* <h1 className='title'>鬼滅の刃</h1> */}
-            {/* <img src="/images/hero3.png" alt="Akaza" className='left'/> */}
-            {/* <img src="/images/hero.png" alt="Akaza" className='right'/> */}
-
             <div className='body'>
                 <div className="content">
                     <div className="space-y-5 hidden md:block">
                         {/* <p>Cool. Crisp. Classic.</p> */}
                         <p className="subtitle-left">
                             The Final Descent into <br /> the Infinity Castle
-
                         </p>
+
                     </div>
 
-                    <div className="view-cocktails">
+                    <div className="view">
                         <p className="subtitle">
                             Experience the legendary showdown through visuals, story recaps, and battles.
                         </p>
@@ -105,25 +101,17 @@ const Hero = () => {
 
         </section>
 
-        {/* <div className="video absolute inset-0">
-            <video
-            ref={videoRef}
-             src="/videos/hero.mp4" muted playsInline preload='auto' />
-        </div> */}
-
-        <div className="video absolute inset-0">
+        <div className="video hero-video absolute inset-0">
 		<video
 		 ref={videoRef}
 		 muted
 		 playsInline
 		 preload="auto"
-		 src="/videos/output8.mp4"
+		 src="/videos/hero.mp4"
          className="w-full h-full object-cover"
 		/>
 	 </div>
     </>
-      
-    
   )
 }
 
