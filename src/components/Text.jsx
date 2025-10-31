@@ -32,7 +32,7 @@ export default function Text({text}) {
         className="relative w-full h-auto px-4 sm:px-8 md:px-12 py-2 md:py-10 flex justify-center items-center overflow-hidden"
       >
         <h1
-          className="animate-text relative z-10 max-w-[80%] text-center text-[2vw] sm:text-[3vw] font-extrabold leading-snug tracking-tight text-neutral-900"
+          className="animate-text relative z-10 max-w-[80%] text-center text-[4vw] sm:text-[3vw] font-extrabold leading-snug tracking-tight text-neutral-900"
           style={{ "--clip-value": "100%" }}
         >
           {text}
