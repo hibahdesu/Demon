@@ -92,8 +92,8 @@ const Hero = () => {
         Infinity<br />Castle
       </h1>
 
-      <div className="body container mx-auto absolute left-1/2 -translate-x-1/2 lg:bottom-20 top-auto md:top-[30vh] flex justify-between items-end px-5">
-        <div className="content flex lg:flex-row flex-col w-full gap-10 justify-between items-center lg:items-end mx-auto">
+      <div className="body container mx-auto absolute left-1/2 -translate-x-1/2 lg:bottom-20 bottom-10 md:top-[30vh] flex justify-between items-end px-5">
+        <div className="content flex flex-col lg:flex-row w-full gap-10 justify-between items-center lg:items-end mx-auto">
           <div className="space-y-5 hidden md:block">
             <p className="subtitle-left text-4xl font-bold max-w-xl">
               The Final Descent into <br /> the Infinity Castle
