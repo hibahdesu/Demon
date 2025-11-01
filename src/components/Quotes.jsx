@@ -43,7 +43,7 @@ const Quotes = ({ quotes }) => {
     <section
       id="fights"
       ref={sectionRef}
-      className="horizontal-quotes relative w-full min-h-screen overflow-hidden my-8"
+      className="horizontal-quotes relative w-full min-h-screen overflow-hidden my-2 md:my-8"
     >
       <div
         ref={containerRef}
