@@ -92,7 +92,7 @@ const Hero = () => {
         )}
       </div>
 
-      <h1 className="title text-center leading-none text-5xl sm:text-6xl md:text-[10vw] mt-32 font-logo">
+      <h1 className="title text-center leading-none text-6xl sm:text-7xl md:text-[10vw] mt-32 font-logo">
         Infinity<br />Castle
       </h1>
 
@@ -104,7 +104,7 @@ const Hero = () => {
             </p>
           </div>
           <div className="view space-y-5 text-lg lg:max-w-2xs md:max-w-xs w-full">
-            <p className="subtitle text-left">
+            <p className="subtitle text-center md:text-left">
               Experience the legendary showdown through visuals, story recaps, and battles.
             </p>
           </div>

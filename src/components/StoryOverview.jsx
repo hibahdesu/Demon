@@ -88,7 +88,7 @@ function StoryOverview() {
   }, []);
 
   return (
-    <section id="story" className="bg py-2 md:py-18" ref={sectionRef}>
+    <section id="story" className="bg py-6 md:py-18" ref={sectionRef}>
       <div className="container mx-auto px-6 text-center">
         {/* <h1 ref={titleRef} className="animated-title2 mb-6 text-4xl md:text-5xl font-bold text-white">
           {storyOverviewContent.title}
