@@ -51,7 +51,9 @@ Coming soon — cinematic stills and dashboard previews.
 
 ## 📜 License
 
-MIT — feel free to remix, adapt, and build upon it.
+- [Domestic Box Office](https://www.boxofficemojo.com/month/september/2025/?grossesOption=calendarGrosses)
+
+- [SA Box Office](https://film.moc.gov.sa/en/Box-Office)
 
 ## 🙌 Credits
 
