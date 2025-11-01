@@ -35,9 +35,8 @@ This project is a tribute to the emotional and visual legacy of *Demon Slayer: I
 
 You can deploy this project for free using:
 
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
-- [Cloudflare Pages](https://pages.cloudflare.com/)
+- [Vercel](https://infinitycastle.vercel.app/)
+
 
 ## 🛠️ Tech Stack
 
