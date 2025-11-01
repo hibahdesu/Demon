@@ -245,12 +245,12 @@ body {
             @apply flex md:flex-row flex-col md:justify-between items-center gap-5 py-5 lg:px-0 px-5 container mx-auto;
         } */
         a {
-            @apply cursor-pointer text-nowrap md:text-base text-sm px-4 py-2 rounded-md
+            @apply cursor-pointer text-nowrap text-xs md:text-sm  p-2 rounded-md
             transition duration-300;
         }
 
         ul {
-            @apply flex flex-center lg:gap-8 gap-7;
+            @apply flex flex-center;
         }
     }
 
