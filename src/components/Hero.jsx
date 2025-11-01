@@ -82,7 +82,7 @@ const Hero = () => {
           ref={videoRef}
           muted
           playsInline
-          preload="auto"
+          preload="metadata"
           src="/videos/hero.mp4"
           className="w-full h-full object-cover"
         />
