@@ -257,20 +257,21 @@ body {
     .bg {
         @apply absolute inset-0 size-full bg-[url("/images/bg.png")];
     }
+    video {
+            @apply w-full md:h-[80%] h-1/2 absolute bottom-0 left-0 md:object-contain object-bottom object-cover;
+        }
 
     #hero {
-        @apply relative z-10 min-h-dvh w-full h-screen border border-transparent;
+        @apply relative z-10 min-h-dvh min-h-[100svh] w-full h-screen border border-transparent;
 
         h1 {
             font-family: var(--font-logo);
             @apply md:mt-32 mt-40 text-7xl md:text-[10vw] leading-none text-center;
         }
-        video {
-            @apply w-full md:h-[80%] h-1/2 absolute bottom-0 left-0 md:object-contain object-bottom object-cover;
-        }
+        
         .video-wrapper {
             @apply absolute inset-0 z-0;
-            }
+        }
 
 
         .left {
