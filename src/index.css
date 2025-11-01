@@ -24,7 +24,7 @@
     --font-body: 'Kosugi Maru', sans-serif;   /* For clean body text */
 }
 
-html,
+/* html,
 body {
     width: 100%;
     background-color: black;
@@ -32,8 +32,21 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
     font-family: var(--font-body);
+} */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE 10+ */
+  overflow-y: scroll;
 }
-
 
 .logo {
     width: 80px;
@@ -266,7 +279,7 @@ body {
             @apply md:mt-32 mt-40 text-7xl md:text-[10vw] leading-none text-center;
         }
         video {
-            @apply w-full md:h-[80%] h-1/2 absolute bottom-0 left-0 md:object-contain object-bottom object-cover;
+            @apply w-full md:h-[85%] h-1/2 absolute bottom-0 left-0 md:object-contain object-bottom object-cover;
         }
         .video-wrapper {
             @apply absolute inset-0 z-0;
