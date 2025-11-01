@@ -33,6 +33,7 @@ function BoxOfficeIntro() {
           autoPlay
           muted
           playsInline
+          preload="metadata"
           className="absolute top-0 left-0 w-full h-full object-cover z-0"
         >
           <source src={boxOfficeIntroContent.videoSrc} type="video/mp4" />
