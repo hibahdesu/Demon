@@ -78,6 +78,7 @@ const Hero = () => {
           preload="auto"
           src="/videos/hero.mp4"
           className="w-full h-full object-cover"
+          poster="/images/hero-poster.jpg"
         />
       </div>
 
