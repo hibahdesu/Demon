@@ -38,7 +38,7 @@ const AkazaEnd = () => {
     <section ref={sectionRef} className="w-full px-6 py-10 md:py-20 flex justify-center">
       <div
         className="grid grid-cols-2 gap-6 w-full max-w-6xl"
-        style={{ gridTemplateRows: 'repeat(12, minmax(100px, auto))' }}
+        style={{ gridTemplateRows: 'repeat(10, minmax(100px, auto))' }}
       >
         {akazaEndContent.map((item, index) => {
           const baseClass = `${item.colStart} ${item.rowStart} ${item.rowSpan} rounded-xl overflow-hidden fade-in`;
