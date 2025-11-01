@@ -5,23 +5,27 @@ import { boxOfficeIntroContent } from '../../constants';
 
 function BoxOfficeIntro() {
   useGSAP(() => {
-    const heroSplit = new SplitText('.titleHero', { type: 'chars, words' });
-    const paragraphSplitLeft = new SplitText('.subtitle-left-hero', { type: 'lines' });
+    document.fonts.ready.then(() => {
+      setTimeout(() => {
+        const heroSplit = new SplitText('.titleHero', { type: 'chars, words' });
+        const paragraphSplitLeft = new SplitText('.subtitle-left-hero', { type: 'lines' });
 
-    gsap.from(heroSplit.chars, {
-      yPercent: 100,
-      duration: 1.8,
-      ease: 'expo.out',
-      stagger: 0.06,
-    });
+        gsap.from(heroSplit.chars, {
+          yPercent: 100,
+          duration: 1.8,
+          ease: 'expo.out',
+          stagger: 0.06,
+        });
 
-    gsap.from(paragraphSplitLeft.lines, {
-      opacity: 0,
-      yPercent: 100,
-      duration: 1.8,
-      ease: 'expo.out',
-      stagger: 0.06,
-      delay: 1,
+        gsap.from(paragraphSplitLeft.lines, {
+          opacity: 0,
+          yPercent: 100,
+          duration: 1.8,
+          ease: 'expo.out',
+          stagger: 0.06,
+          delay: 1,
+        });
+      }, 0); // Delay by one tick to ensure DOM is ready
     });
   }, []);
 
@@ -41,15 +45,15 @@ function BoxOfficeIntro() {
         </video>
 
         <div id="videoHero" className="absolute top-50 md:30 left-12 z-10 max-w-sm md:max-w-md lg:max-w-lg">
-          <h1 className={boxOfficeIntroContent.titles[0].className}>
+          <h1 className={`titleHero ${boxOfficeIntroContent.titles[0].className}`}>
             {boxOfficeIntroContent.titles[0].text}
           </h1>
-          <p className={boxOfficeIntroContent.subtitle.className}>
+          <p className={`subtitle-left-hero ${boxOfficeIntroContent.subtitle.className}`}>
             {boxOfficeIntroContent.subtitle.text}
           </p>
         </div>
 
-        <h1 className={boxOfficeIntroContent.titles[1].className}>
+        <h1 className={`titleHero ${boxOfficeIntroContent.titles[1].className}`}>
           {boxOfficeIntroContent.titles[1].text}
         </h1>
       </div>

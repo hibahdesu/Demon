@@ -12,67 +12,60 @@ const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 767 });
 
   useGSAP(() => {
-    const heroSplit = new SplitText('.title', { type: 'chars, words' });
-    const paragraphSplit = new SplitText('.subtitle', { type: 'lines' });
-    const paragraphSplitLeft = new SplitText('.subtitle-left', { type: 'lines' });
+    document.fonts.ready.then(() => {
+      setTimeout(() => {
+        const heroSplit = new SplitText('.title', { type: 'chars, words' });
+        const paragraphSplit = new SplitText('.subtitle', { type: 'lines' });
+        const paragraphSplitLeft = new SplitText('.subtitle-left', { type: 'lines' });
 
-    heroSplit.chars.forEach((char) => char.classList.add('text-gradient'));
+        heroSplit.chars.forEach((char) => char.classList.add('text-gradient'));
 
-    gsap.from(heroSplit.chars, {
-      yPercent: 100,
-      duration: 1.8,
-      ease: 'expo.out',
-      stagger: 0.06,
+        gsap.from(heroSplit.chars, {
+          yPercent: 100,
+          duration: 1.8,
+          ease: 'expo.out',
+          stagger: 0.06,
+        });
+
+        gsap.from(paragraphSplitLeft.lines, {
+          opacity: 0,
+          yPercent: 100,
+          duration: 1.8,
+          ease: 'expo.out',
+          stagger: 0.06,
+          delay: 1,
+        });
+
+        gsap.from(paragraphSplit.lines, {
+          opacity: 0,
+          yPercent: 100,
+          duration: 1.8,
+          ease: 'expo.out',
+          stagger: 0.07,
+          delay: 1.2,
+        });
+
+        const startValue = isMobile ? 'top top' : 'center 50%';
+        const endValue = isMobile ? 'bottom top' : 'bottom top';
+
+        videoRef.current.onloadedmetadata = () => {
+          gsap.timeline({
+            scrollTrigger: {
+              trigger: '.video-wrapper',
+              start: startValue,
+              end: endValue,
+              scrub: true,
+              pin: true,
+              anticipatePin: 1,
+              pinSpacing: false,
+            },
+          }).to(videoRef.current, {
+            currentTime: videoRef.current.duration,
+            ease: 'none',
+          });
+        };
+      }, 0); // Delay by one tick to ensure DOM is ready
     });
-
-    gsap.from(paragraphSplitLeft.lines, {
-      opacity: 0,
-      yPercent: 100,
-      duration: 1.8,
-      ease: 'expo.out',
-      stagger: 0.06,
-      delay: 1,
-    });
-
-    gsap.from(paragraphSplit.lines, {
-      opacity: 0,
-      yPercent: 100,
-      duration: 1.8,
-      ease: 'expo.out',
-      stagger: 0.07,
-      delay: 1.2,
-    });
-
-    gsap.timeline({
-      scrollTrigger: {
-        trigger: '#hero',
-        start: 'top top',
-        end: 'bottom top',
-        scrub: true,
-      },
-    })
-      .to('.right', { y: 200 }, 0)
-      .to('.left', { y: -200 }, 0);
-
-    const startValue = isMobile ? 'top top' : 'center 50%';
-    const endValue = isMobile ? 'bottom top' : 'bottom top';
-
-    videoRef.current.onloadedmetadata = () => {
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: '.video-wrapper',
-          start: startValue,
-          end: endValue,
-          scrub: true,
-          pin: true,
-          anticipatePin: 1,
-          pinSpacing: false,
-        },
-      }).to(videoRef.current, {
-        currentTime: videoRef.current.duration,
-        ease: 'none',
-      });
-    };
   }, []);
 
   return (
@@ -82,7 +75,7 @@ const Hero = () => {
           ref={videoRef}
           muted
           playsInline
-          preload="metadata"
+          preload="auto"
           src="/videos/hero.mp4"
           className="w-full h-full object-cover"
         />
